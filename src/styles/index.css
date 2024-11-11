@@ -1,0 +1,29 @@
+#toggle-sidebar-checker {
+    @apply hidden;
+}
+
+.sidebar {
+    @apply fixed top-0  sm:-left-full md:left-0 w-52 min-h-svh;
+    @apply bg-gray-200 text-gray-700;
+    @apply transition-left duration-300 ease-in-out;
+}
+
+#toggle-sidebar-checker:checked ~ .sidebar {
+    @apply sm:left-0;
+}
+
+.wrap-header-content {
+    @apply md:ml-52 bg-red-300 min-h-svh;
+    @apply transition-margin-left duration-300 ease-in-out;
+}
+
+.header {
+    @apply bg-gray-500 text-white text-center font-bold text-2xl p-4 flex items-center;
+}
+
+.toggle-sidebar {
+    @apply md:hidden bg-amber-50 w-10 h-10 flex items-center justify-center flex-col gap-1 px-2 rounded-md ml-auto cursor-pointer;
+}
+.toggle-sidebar > div {
+    @apply w-full h-1 bg-black;
+}
